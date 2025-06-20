@@ -1,5 +1,5 @@
 # Video Game Analysis Project
 
-This is my Portfolio!
+## Overview
 
-[Video Game Sales Data Exploration](video_game_salse_analysis/Video Game Sales Data Exploration.sql)
+[Video Game Sales Data Exploration](sql_codes/video_game_sales_data_exploration.sql)
