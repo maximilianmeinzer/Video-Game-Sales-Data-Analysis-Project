@@ -11,7 +11,9 @@ To extract meaningful insights and identify key trends from historical video gam
 
 ## Dataset
 
-The analysis utilizes the vgsales dataset (from video_game_sales.dbo.vgsales), which contains global video game sales figures for over 16,000 games. Key columns include:
+This project uses the **Video Game Sales** dataset from [Kaggle](https://www.kaggle.com/datasets/gregorut/videogamesales).  
+Originally uploaded by **Gregory Smith**.  
+Key columns include:
 
   **Rank:** Global sales rank of the game  
   **Name:** Name of the video game  
