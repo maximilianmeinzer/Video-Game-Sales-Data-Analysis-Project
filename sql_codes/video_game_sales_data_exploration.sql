@@ -1,3 +1,5 @@
+-- Data Exploration in SQL
+-----------------------------------------------------------------------
 -- A First look at the data:
 
 -- Top 10 Best Selling Games
@@ -7,6 +9,8 @@ FROM
     dbo.vgsales
 ORDER BY 
     Global_Sales DESC;
+
+-----------------------------------------------------------------------
 
 -- Total Sales by Platform
 SELECT 
@@ -18,6 +22,8 @@ GROUP BY
 ORDER BY 
     Total_Global_Sales DESC;
 
+-----------------------------------------------------------------------
+
 -- Total Sales by Genre
 SELECT 
     Genre, sum(Global_Sales) AS Total_Global_Sales
@@ -27,6 +33,8 @@ GROUP BY
     Genre
 ORDER BY 
     Total_Global_Sales DESC;
+
+-----------------------------------------------------------------------
 
 -- Games per Year
 SELECT 
@@ -38,6 +46,8 @@ GROUP BY
 ORDER BY 
     Year;
 
+-----------------------------------------------------------------------
+
 -- Average Sales per Game by Genre
 SELECT 
     Genre, AVG(Global_Sales) as Average_Global_Sales
@@ -47,9 +57,12 @@ GROUP BY
     Genre
 ORDER BY 
     Average_Global_Sales DESC;
-GO
 
--- A deeper look:
+-----------------------------------------------------------------------
+
+-- A deeper look in-depth look:
+
+-----------------------------------------------------------------------
 
 -- Nintendo's Top 5 Bestselling Games
 SELECT 
@@ -61,6 +74,8 @@ WHERE
 ORDER BY 
     Global_Sales DESC;
 
+-----------------------------------------------------------------------
+
 -- Games Released after 2000 with over 10 million Sales in North America
 SELECT 
     Name, Platform, Year, NA_Sales
@@ -70,6 +85,8 @@ WHERE
     Year >= 2000 AND NA_Sales >= 10
 ORDER BY 
     NA_Sales DESC;
+
+-----------------------------------------------------------------------
 
 --Publishers with more than 100 Games Released and Total Sales
 SELECT 
@@ -84,7 +101,12 @@ HAVING
     COUNT(Name) >= 100
 ORDER BY 
     Total_Global_Sales DESC;
-GO
+
+-----------------------------------------------------------------------
+
+--Advanced Queries
+
+-----------------------------------------------------------------------
 
 --Rank Games by Sales within each Genre
 SELECT
@@ -97,6 +119,8 @@ FROM
     dbo.vgsales
 ORDER BY
     Genre, Rank_Within_Genre;
+
+-----------------------------------------------------------------------
 
 --Yearly Sales Trends for Top 3 Genres
 WITH TopGenres AS (
@@ -118,6 +142,8 @@ GROUP BY
 ORDER BY
     vg.Year, Yearly_Genre_Sales DESC;
 
+-----------------------------------------------------------------------
+
 -- Games that sold better in JP than NA
 SELECT
     Name,
@@ -131,6 +157,10 @@ WHERE
     JP_Sales > NA_Sales AND JP_Sales > 1
 ORDER BY
     JP_Sales DESC;
+
+-----------------------------------------------------------------------
+
+-- Best selling game in each Genre
 
 SELECT Name, Platform, Genre, Global_Sales
 FROM (
