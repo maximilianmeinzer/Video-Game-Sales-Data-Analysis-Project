@@ -11,7 +11,7 @@ To extract meaningful insights and identify key trends from historical video gam
 
 ## Dataset
 
-This project uses the **Video Game Sales** dataset from [Kaggle](https://www.kaggle.com/datasets/gregorut/videogamesales).  
+This project uses the **Video Game Sales** dataset from [Kaggle](https://www.kaggle.com/datasets/gregorut/videogamesales).
 Originally uploaded by **Gregory Smith**.  
 Key columns include:
 
