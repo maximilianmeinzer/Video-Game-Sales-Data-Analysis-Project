@@ -13,17 +13,17 @@ To extract meaningful insights and identify key trends from historical video gam
 
 The analysis utilizes the vgsales dataset (from video_game_sales.dbo.vgsales), which contains global video game sales figures for over 16,000 games. Key columns include:
 
-  Rank: Global sales rank of the game
-  Name: Name of the video game
-  Platform: Gaming console platform (e.g., PS4, Xbox 360, PC)
-  Year: Release year of the game
-  Genre: Game genre (e.g., Action, Sports, RPG)
-  Publisher: Company that published the game
-  NA_Sales: Sales in North America (in millions USD)
-  EU_Sales: Sales in Europe (in millions USD)
-  JP_Sales: Sales in Japan (in millions USD)
-  Other_Sales: Sales in other regions (in millions USD)
-  Global_Sales: Total worldwide sales (in millions USD)
+  Rank: Global sales rank of the game  
+  Name: Name of the video game  
+  Platform: Gaming console platform (e.g., PS4, Xbox 360, PC)  
+  Year: Release year of the game  
+  Genre: Game genre (e.g., Action, Sports, RPG)  
+  Publisher: Company that published the game  
+  NA_Sales: Sales in North America (in millions USD)  
+  EU_Sales: Sales in Europe (in millions USD)  
+  JP_Sales: Sales in Japan (in millions USD)  
+  Other_Sales: Sales in other regions (in millions USD)  
+  Global_Sales: Total worldwide sales (in millions USD)  
 
 ##Data Exploration in SQL
 
