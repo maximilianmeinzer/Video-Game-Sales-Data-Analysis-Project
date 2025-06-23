@@ -27,11 +27,11 @@ Key columns include:
   **Other_Sales:** Sales in other regions (in millions USD)  
   **Global_Sales:** Total worldwide sales (in millions USD)  
 
-##Data Exploration in SQL
+## Data Exploration in SQL
 
 [Video Game Sales Data Exploration](sql_codes/video_game_sales_data_exploration.sql)
 
-Tools Used
+## Tools Used
 
 Database: SQL Server
 IDE: SQL Server Management Studio
