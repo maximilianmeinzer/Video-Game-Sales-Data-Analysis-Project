@@ -6,6 +6,8 @@ Hi! I'm Max, an aspiring data analyst currently building my skills in SQL and da
 This repository showcases my SQL skills through an analysis of a video game sales dataset. 
 The project covers essential data exploration and data cleaning techniques.
 
+## Table of Contents
+
 ## Goal of the Project:
 To extract meaningful insights and identify key trends from historical video game sales
 
