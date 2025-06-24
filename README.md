@@ -29,13 +29,14 @@ Key columns include:
   **Other_Sales:** Sales in other regions (in millions USD)  
   **Global_Sales:** Total worldwide sales (in millions USD)  
 
+## Data Cleaning in SQL
+
+[Video Game Sales Data Cleaning](sql_codes/data_cleaning.sql)
+
 ## Data Exploration in SQL
 
 [Video Game Sales Data Exploration](sql_codes/data_exploration.sql)
 
-## Data Cleaning in SQL
-
-[Video Game Sales Data Cleaning](sql_codes/data_cleaning.sql)
 
 ## Tools Used
 
