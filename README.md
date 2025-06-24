@@ -31,7 +31,11 @@ Key columns include:
 
 ## Data Exploration in SQL
 
-[Video Game Sales Data Exploration](sql_codes/video_game_sales_data_exploration.sql)
+[Video Game Sales Data Exploration](sql_codes/data_exploration.sql)
+
+## Data Cleaning in SQL
+
+[Video Game Sales Data Cleaning](sql_codes/data_cleaning.sql)
 
 ## Tools Used
 
