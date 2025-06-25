@@ -9,8 +9,11 @@ The project covers essential data exploration and data cleaning techniques.
 ## Table of Contents
 
 * [Introduction](#Introduction)  
+
 * [Goal of the Project](#Goal-of-the-Project)  
+
 * [Dataset](#Dataset)  
+
 * SQL
 	* [Data Cleaning in SQL](#Data-Cleaning-in-SQL)  
 	* [Data Exploration in SQL](#Data-Exploration-in-SQL)  
