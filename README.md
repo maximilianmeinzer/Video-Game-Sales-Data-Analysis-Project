@@ -43,6 +43,9 @@ Key columns include:
 
 [Video Game Sales Data Cleaning](sql_codes/data_cleaning.sql)
 
+When working with a dataset, the data in it can be very messy due to missing values or inconsistencies, therefore data cleaning is an essential step when analyzing and working with data. In SQL, there are many ways to identify and correct these inconsistencies, as shown in the provided SQL file.
+
+
 ## Data Exploration in SQL
 
 [Video Game Sales Data Exploration](sql_codes/data_exploration.sql)
