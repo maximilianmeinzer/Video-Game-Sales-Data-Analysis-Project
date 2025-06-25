@@ -7,7 +7,7 @@ FROM
 
 -----------------------------------------------------------------------
 
--- Identifying Missing Values (NULLS)
+-- 1) Check for Missing Values (NULLS)
 
 SELECT 
     DISTINCT Year
@@ -23,6 +23,8 @@ FROM
 ORDER BY
     Publisher;
 -- Identified that NULLs listed as 'N/A'
+
+-- 2) Identify how many Missing Values
 
 SELECT
     COUNT(*) AS total_rows,
@@ -48,7 +50,7 @@ FROM
 
 -----------------------------------------------------------------------
 
--- Checking Platform Column for Inconsistent Naming Schemes
+-- 3) Checking Platform Column for Inconsistent Naming Schemes
 
 SELECT
     DISTINCT Platform
@@ -57,7 +59,7 @@ FROM
 ORDER BY
     Platform;
 
--- Corrected Unclear Names
+-- 4) Correct Unclear Names
 
 UPDATE vgsales
 SET Platform = 
@@ -76,7 +78,7 @@ SET Platform =
     END
 WHERE Platform IN ('DC', 'GEN', 'GG', 'NG', 'PSV', 'SAT', 'SCD', 'TG16', 'WS', 'XB')
                   
--- Checking Genre Column for Inconsistent Naming Schemes
+-- 5) Checking Genre Column for Inconsistent Naming Schemes
 
 
 SELECT
@@ -90,7 +92,7 @@ ORDER BY
 
 -----------------------------------------------------------------------
 
--- Checking for Outliers
+-- 6) Checking Year Column for Outliers
 SELECT
     MIN(Year) AS EarliestYear,
     MAX(Year) AS LatestYear
@@ -99,6 +101,7 @@ FROM
 
 -- 2020 outlier, should exclude in future analysis: WHERE Year <> '2020'
 
+-- 6) Checking Bestselling Games for Outliers
 SELECT TOP 5
     Name,
     Platform,
@@ -112,7 +115,7 @@ ORDER BY
 
 -----------------------------------------------------------------------
 
--- Transforming Year Column into Integer Data Type for Future Analysis
+-- 7) Transforming Year Column into Integer Data Type for Future Analysis
 
 SELECT
     Name,
@@ -136,7 +139,7 @@ ORDER BY
 
     -----------------------------------------------------------------------
 
---Compare Global Sales with Sum of Regional Sales for Validation
+-- 8) Compare Global Sales with Sum of Regional Sales for Validation
 
 SELECT
     Name,
@@ -151,7 +154,7 @@ SELECT
         ELSE 'Mismatch'
     END AS Global_Sales_Comparison
 FROM
-    [video_game_sales].[dbo].[vgsales]
+    vgsales
 ORDER BY
     Global_Sales_Comparison DESC, Name;
 
