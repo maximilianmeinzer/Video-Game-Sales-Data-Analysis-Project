@@ -53,7 +53,17 @@ GROUP BY
 ORDER BY 
     TotalGlobalSales DESC;
 
--- 4) Games per Year
+-- 4) Average Sales per Game by Genre
+SELECT 
+    Genre, AVG(Global_Sales) as AverageGlobalSales
+FROM 
+    CleanedVGSales
+GROUP BY 
+    Genre
+ORDER BY 
+    AverageGlobalSales DESC;
+
+-- 5) Games per Year
 SELECT 
     ReleaseYear, 
     COUNT(Name) AS NumberofGamesReleased
@@ -64,17 +74,15 @@ GROUP BY
 ORDER BY 
     ReleaseYear;
 
--- 5) Average Sales per Game by Genre
-SELECT 
-    Genre, AVG(Global_Sales) as AverageGlobalSales
-FROM 
-    CleanedVGSales
-GROUP BY 
-    Genre
-ORDER BY 
-    AverageGlobalSales DESC;
+-- 6) Yearly Sales Trends for Top 3 Genres
+--(WITH)
+, TopGenres AS (
+    SELECT TOP 3 Genre
+    FROM CleanedVGSales
+    GROUP BY Genre
+    ORDER BY SUM(Global_Sales) DESC
 
--- 6) Nintendo's Top 5 Bestselling Games
+-- 7) Nintendo's Top 5 Bestselling Games
 SELECT 
     TOP 5 Name, Platform, ReleaseYear, Global_Sales
 FROM 
@@ -84,7 +92,7 @@ WHERE
 ORDER BY 
     Global_Sales DESC;
 
--- 7) Games Released after 2000 with over 10 million Sales in North America
+-- 8) Games Released after 2000 with over 10 million Sales in North America
 SELECT 
     Name, Platform, ReleaseYear, NA_Sales
 FROM 
@@ -95,7 +103,7 @@ WHERE
 ORDER BY 
     NA_Sales DESC;
 
--- 8) Publishers with more than 100 Games Released and Total Sales
+-- 9) Publishers with more than 100 Games Released and Total Sales
 SELECT 
     Publisher, 
     COUNT(Name) AS NumberofGames, 
@@ -109,39 +117,7 @@ HAVING
 ORDER BY 
     TotalGlobalSales DESC;
 
---9) Rank Games by Sales within each Genre
-SELECT
-    Name,
-    Platform,
-    Genre,
-    Global_Sales,
-    ROW_NUMBER() OVER (PARTITION BY Genre ORDER BY Global_Sales DESC) AS Rank_Within_Genre
-FROM
-    CleanedVGSales
-ORDER BY
-    Genre, Rank_Within_Genre;
-
---10) Yearly Sales Trends for Top 3 Genres
-, TopGenres AS (
-    SELECT TOP 3 Genre
-    FROM CleanedVGSales
-    GROUP BY Genre
-    ORDER BY SUM(Global_Sales) DESC
-)
-SELECT
-    vg.ReleaseYear,
-    vg.Genre,
-    SUM(vg.Global_Sales) AS Yearly_Genre_Sales
-FROM
-    CleanedVGSales AS vg
-JOIN
-    TopGenres AS tg ON vg.Genre = tg.Genre
-GROUP BY
-    vg.ReleaseYear, vg.Genre
-ORDER BY
-    vg.ReleaseYear, Yearly_Genre_Sales DESC;
-
--- 11) Games that sold better in JP than NA
+-- 10) Games that sold better in JP than NA
 SELECT
     Name,
     Platform,
@@ -155,7 +131,7 @@ WHERE
 ORDER BY
     JP_Sales DESC;
 
--- 12) Top 3 Most Sold Genres in Japan
+-- 11) Top 3 Most Sold Genres in Japan
 
 SELECT TOP 3 
     Genre, SUM(JP_Sales) AS TotalJPSales
@@ -165,6 +141,31 @@ GROUP by
     Genre
 ORDER BY 
     TotalJpSales DESC
+
+-- 12) Rank Games by Sales within each Genre
+SELECT
+    Name,
+    Platform,
+    Genre,
+    Global_Sales,
+    ROW_NUMBER() OVER (PARTITION BY Genre ORDER BY Global_Sales DESC) AS Rank_Within_Genre
+FROM
+    CleanedVGSales
+ORDER BY
+    Genre, Rank_Within_Genre;
+)
+SELECT
+    vg.ReleaseYear,
+    vg.Genre,
+    SUM(vg.Global_Sales) AS Yearly_Genre_Sales
+FROM
+    CleanedVGSales AS vg
+JOIN
+    TopGenres AS tg ON vg.Genre = tg.Genre
+GROUP BY
+    vg.ReleaseYear, vg.Genre
+ORDER BY
+    vg.ReleaseYear, Yearly_Genre_Sales DESC;
 
 -- 13) Best selling Game for each Genre
 SELECT Name, Platform, Genre, Global_Sales
