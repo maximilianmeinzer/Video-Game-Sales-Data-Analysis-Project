@@ -51,9 +51,19 @@ Missing values are one of the most common problems encountered in raw datasets. 
 
 ### 2. Identifying Inconsistent and Unclear Naming Schemes
 
-Consistent naming within categorical columns is crucial for aggregations and analysis. Our focus here was on standardizing entries in both the Platform and Genre columns. We began by examining the Platform column. A SELECT DISTINCT Platform query was executed to list all unique entries, which revealed several abbreviated or shorthand names (e.g., 'DC', 'PSV', 'XB') that lacked clarity and consistency, therefore values like 'DC' and 'PSV' needed to be changed to 'Dreamcast' and 'PS Vita' respectively. To address this, an UPDATE Statement was applied to the vgsales table, where the CASE Statement allows us to update multiple values in a single query. This process successfully transformed every ambiguous abbreviation into its correct, standardized, and fully spelled-out name.
+Consistent naming within categorical columns is crucial for aggregations and analysis. Our focus here was on standardizing entries in both the Platform and Genre columns.  
 
-Following the platform standardization, a similar SELECT DISTINCT check was performed on the Genre column. Here, no inconsistencies were found (meaning each genre was already consistently named), confirming its data was ready for analysis without further modification.
+We began by examining the Platform column. A **SELECT DISTINCT** Platform query was executed to list all unique entries, which revealed several abbreviated or shorthand names (e.g., 'DC', 'PSV', 'XB') that lacked clarity and consistency, therefore values like 'DC' and 'PSV' needed to be changed to 'Dreamcast' and 'PS Vita' respectively. To address this, an **UPDATE** Statement was applied to the vgsales table, where the **CASE** Statement allows us to update multiple values in a single query. This process successfully transformed every ambiguous abbreviation into its correct, standardized, and fully spelled-out name.
+
+Following the platform standardization, a similar **SELECT DISTINCT** check was performed on the Genre column. Here, no inconsistencies were found (meaning each genre was already consistently named), confirming its data was ready for analysis without further modification.
+
+### 3. Identifying Outliers
+
+Sometimes data is entered incorrectly, which is why we have to identify these outliers to avoid skewed analytical results. We focused on the **Year** and **Global_Sales** columns, as these are common areas for outliers in data.  
+
+First, to inspect the range of the **Year** column, we queried its minimum and maximum values. This revealed a *2020* entry, which stood out as an outlier beyond the expected timeframe of the dataset. To ensure accurate trend analysis, we decided to exclude this 2020 entry from all future queries.  
+
+Next, we examined the top-selling games to check for any extreme outliers in **Global_Sales** that might influence sales metrics. After reviewing, no significant outliers were found in the Global_Sales figures among the bestselling games.
 
 ## Data Exploration in SQL
 
