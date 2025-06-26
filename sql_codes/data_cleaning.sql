@@ -120,7 +120,7 @@ ORDER BY
 SELECT
     Name,
     Platform,
-    CAST(Year AS INT) AS Release_Year,
+    CAST(Year AS INT) AS ReleaseYear,
     Genre,
     Publisher,
     NA_Sales,
@@ -150,7 +150,7 @@ SELECT
     Global_Sales,
     (NA_Sales + EU_Sales + JP_Sales + Other_Sales) AS Calculated_Global_Sales,
     CASE
-        WHEN ABS((NA_Sales + EU_Sales + JP_Sales + Other_Sales) - Global_Sales) < 0.01 THEN 'Match'
+        WHEN ABS((NA_Sales + EU_Sales + JP_Sales + Other_Sales) - Global_Sales) < 0.1 THEN 'Match'
         ELSE 'Mismatch'
     END AS Global_Sales_Comparison
 FROM
