@@ -94,10 +94,35 @@ To ensure consistency and efficiency throughout my exploration, I first defined 
 * Removing the 2020 outlier from the Year column.
 * Excluding records with missing Publisher (NULL or 'N/A' entries).
 
-By doing this, I avoided repeating these filtering and transformation steps in every single exploration query, making my code cleaner, faster, and less prone to errors. All the following analyses will query directly from this CleanedVGSales CTE.
+By doing this, I avoided repeating these filtering and transformation steps in every single exploration query. All the following analyses will query directly from this CleanedVGSales CTE. To access the refined dataset each query has to be pasted directly beneath the CTE within the SQL file.
 
+### 2. Analyzing Overall Market Performance
 
+**Top 10 Best Selling Games:** Identifies the ten games with the highest global sales
 
+**Total Sales by Platform:** Summarizes total global sales for each gaming platform to identify dominant platforms by using an aggregate function and `GROUP BY`
+
+**Total Sales by Genre:** Calculates the total global sales for each game genre to identify the most popular genres
+
+**Average Sales per Game by Genre:**
+
+### 3. Trends over Time
+
+Games per Year
+
+Yearly Sales Trends for Top 3 Genres
+
+### 4. Publisher, Regional, & Segment Deep Dives
+
+Nintendo's Top 5 Bestselling Games
+
+Games Released after 2000 with over 10 Million Sales in North America
+
+Publishers with more than 100 Games Released and Total Sales
+
+Games that sold better in JP than NA
+
+Top 3 Most Sold Genres in Japan
 
 
 ## Tools Used
