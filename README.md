@@ -128,7 +128,7 @@ By doing this, I avoided repeating these filtering and transformation steps in e
 
 **Rank Games by Sales within each Genre:** assigns a sales rank to each game within its respective genre, enabling a direct comparison among similar titles by using a window function to `PARTITION BY` Genre.
 
-**Best selling Game for each Genre:** Identifies the single top-selling game for every individual genre. This query uses a subquery since otherwise a WHERE statement cannot be used in combinatinon with a window function. 
+**Best selling Game for each Genre:** Identifies the single top-selling game for every individual genre. This query uses a subquery since otherwise a `WHERE` statement cannot be used in combinatinon with a window function. 
 
 ## Tools Used
 
