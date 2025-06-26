@@ -14,7 +14,8 @@ The project covers essential data exploration and data cleaning techniques.
 
 * [Dataset](#Dataset)  
 
-* SQL	* [Data Cleaning in SQL](#Data-Cleaning-in-SQL)  
+* SQL	
+	* [Data Cleaning in SQL](#Data-Cleaning-in-SQL)  
 	* [Data Exploration in SQL](#Data-Exploration-in-SQL)  
 
 ## Goal of the Project:
