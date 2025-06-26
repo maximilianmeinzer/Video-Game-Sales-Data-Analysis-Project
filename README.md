@@ -47,7 +47,7 @@ When working with a dataset, the data in it can be very messy due to missing val
 
 ### 1. Identifying Missing Values
 
-Missing values are one of the most common problems encountered in raw datasets. I inspected **DISTINCT** values in key columns like *Year* and *Publisher, to reveal if missing values exist. Instead of **NULLs** the missing values were saved as **N/A** Strings. The next query counted the exact number of missing entries across all relevant columns, where we found out that there were **271** missing entries in the *Year* column and **58** in the *Publisher* column. We achieved this by using the **SUM** Aggregate function with a **CASE** Statement, which identified records that were **NULL** or contained the **'N/A'**. This led to the decision to exclude these incomplete entries from the analysis for data integrity.
+Missing values are one of the most common problems encountered in raw datasets. I inspected **DISTINCT** values in key columns like *Year* and *Publisher*, to reveal if missing values exist. Instead of **NULLs** the missing values were saved as **N/A** Strings. The next query counted the exact number of missing entries across all relevant columns, where we found out that there were **271** missing entries in the *Year* column and **58** in the *Publisher* column. We achieved this by using the **SUM** Aggregate function with a **CASE** Statement, which identified records that were **NULL** or contained the **'N/A'**. This led to the decision to exclude these incomplete entries from the analysis for data integrity.
 
 ### 2. Identifying Inconsistent and Unclear Naming Schemes
 
@@ -82,6 +82,20 @@ With all these cleaning steps done, I now have a clean and reliable dataset, rea
 ## Data Exploration in SQL
 
 [Video Game Sales Data Exploration](sql_codes/data_exploration.sql)
+
+Now that I have the data cleaned and prepared, I can finally dive into the exciting phase of data exploration. This section focuses on using the cleaned dataset to uncover key trends, identify top-performing games and publishers, and understand the various dynamics within the video game market. Through a series of SQL queries, I'll extract valuable insights, revealing patterns in sales, popularity by genre and platform, and how the industry has evolved over time.
+
+### 1. Preparing Our Data for Exploration: The **CleanedVGSales** CTE
+
+To ensure consistency and efficiency throughout my exploration, I first defined a Common Table Expression (CTE) named CleanedVGSales. This CTE acts as a temporary data table, which filters and Formats the dataset for all subsequent queries. It incorporates several of the crucial cleaning steps from the previous phase directly, such as:
+
+* Converting the Year column to an integer (named ReleaseYear).
+* Excluding records with missing Year (NULL or 'N/A' entries).
+* Removing the 2020 outlier from the Year column.
+* Excluding records with missing Publisher (NULL or 'N/A' entries).
+
+By doing this, I avoided repeating these filtering and transformation steps in every single exploration query, making my code cleaner, faster, and less prone to errors. All the following analyses will query directly from this CleanedVGSales CTE.
+
 
 
 
