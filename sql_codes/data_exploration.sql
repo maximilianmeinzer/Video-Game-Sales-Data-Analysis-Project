@@ -81,6 +81,19 @@ ORDER BY
     FROM CleanedVGSales
     GROUP BY Genre
     ORDER BY SUM(Global_Sales) DESC
+    )
+SELECT
+    vg.ReleaseYear,
+    vg.Genre,
+    SUM(vg.Global_Sales) AS Yearly_Genre_Sales
+FROM
+    CleanedVGSales AS vg
+JOIN
+    TopGenres AS tg ON vg.Genre = tg.Genre
+GROUP BY
+    vg.ReleaseYear, vg.Genre
+ORDER BY
+    vg.ReleaseYear, Yearly_Genre_Sales DESC;
 
 -- 7) Nintendo's Top 5 Bestselling Games
 SELECT 
@@ -153,19 +166,6 @@ FROM
     CleanedVGSales
 ORDER BY
     Genre, Rank_Within_Genre;
-)
-SELECT
-    vg.ReleaseYear,
-    vg.Genre,
-    SUM(vg.Global_Sales) AS Yearly_Genre_Sales
-FROM
-    CleanedVGSales AS vg
-JOIN
-    TopGenres AS tg ON vg.Genre = tg.Genre
-GROUP BY
-    vg.ReleaseYear, vg.Genre
-ORDER BY
-    vg.ReleaseYear, Yearly_Genre_Sales DESC;
 
 -- 13) Best selling Game for each Genre
 SELECT Name, Platform, Genre, Global_Sales
