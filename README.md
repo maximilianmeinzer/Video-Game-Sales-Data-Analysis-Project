@@ -130,6 +130,10 @@ By doing this, I avoided repeating these filtering and transformation steps in e
 
 **Best selling Game for each Genre:** Identifies the single top-selling game for every individual genre. This query uses a subquery since otherwise a `WHERE` statement cannot be used in combinatinon with a window function. 
 
+## Visualizing in Tableau
+
+[Tableau Dashbaord](https://public.tableau.com/views/VideoGameSalesProject_17518196031630/Dashboard1?:language=de-DE&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+
 ## Tools Used
 
 Database: SQL Server
