@@ -18,6 +18,8 @@ The project covers essential data exploration and data cleaning techniques.
 	* [Data Cleaning in SQL](#Data-Cleaning-in-SQL)  
 	* [Data Exploration in SQL](#Data-Exploration-in-SQL)  
 
+* Visualization in Tableau
+
 ## Goal of the Project:
 To extract meaningful insights and identify key trends from historical video game sales
 
@@ -130,9 +132,31 @@ By doing this, I avoided repeating these filtering and transformation steps in e
 
 **Best selling Game for each Genre:** Identifies the single top-selling game for every individual genre. This query uses a subquery since otherwise a `WHERE` statement cannot be used in combinatinon with a window function. 
 
-## Visualizing in Tableau
+## Key Visualizations in Tableau
 
-[Tableau Dashbaord](https://public.tableau.com/views/VideoGameSalesProject_17518196031630/Dashboard1?:language=de-DE&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+[Tableau Dashboard](https://public.tableau.com/views/VideoGameSalesProject_17518196031630/Dashboard1?:language=de-DE&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+
+Finally, to bring all these insights togehter, I've developed an interactive Tableau dashboard to see and explore the key trends and patterns in the video game sales data.
+
+These are the charts included in the dashboard:
+
+### 1. Industry Evolution: Games Released Over Time  
+
+This line chart illustrates the historical trend of video game releases, showcasing the industry's significant growth from the late 1970s.
+What we learn from this is that game releases dramatically increased, reaching a peak around **2008-2009** with over 1400 games released annually. Following this peak, there's a visible decline due to changes in the industry such as the rise of mobile gaming and longer development cycles for AAA titles.
+
+### 2. Yearly Sales for To p3 Genres
+
+These multiple line charts track the annual sales for the top three most popular genres (Action, Shooter, Sports).
+By looking at these three charts together, we get a direct comparison of how each genre's sales have changed over the years. This helps us identify their unique growth periods, peaks, and declines, and understand the shifting market dynamics within these categories.
+
+### 3. Overall Genre Dominance
+
+This bar chart clearly illustrates the total global sales performance of different video game genres.
+It highlights the consistent dominance of **Action** and **Sports** genres, which significantly lead the market in total global sales, guiding potential development or marketing focus. Sales figures are clearly displayed on each bar for quick comparison.
+
+
+
 
 ## Tools Used
 
