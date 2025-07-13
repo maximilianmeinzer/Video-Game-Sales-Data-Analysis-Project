@@ -18,7 +18,7 @@ The project covers essential data exploration and data cleaning techniques.
 	* [Data Cleaning in SQL](#Data-Cleaning-in-SQL)  
 	* [Data Exploration in SQL](#Data-Exploration-in-SQL)  
 
-* Visualization in Tableau
+* [Visualization in Tableau](#Key-Visualizations-in-Tableau)
 
 ## Goal of the Project:
 To extract meaningful insights and identify key trends from historical video game sales
@@ -145,17 +145,25 @@ These are the charts included in the dashboard:
 This line chart illustrates the historical trend of video game releases, showcasing the industry's significant growth from the late 1970s.
 What we learn from this is that game releases dramatically increased, reaching a peak around **2008-2009** with over 1400 games released annually. Following this peak, there's a visible decline due to changes in the industry such as the rise of mobile gaming and longer development cycles for AAA titles.
 
-### 2. Yearly Sales for To p3 Genres
+### 2. Yearly Sales for Top 3 Genres
 
 These multiple line charts track the annual sales for the top three most popular genres (Action, Shooter, Sports).
 By looking at these three charts together, we get a direct comparison of how each genre's sales have changed over the years. This helps us identify their unique growth periods, peaks, and declines, and understand the shifting market dynamics within these categories.
 
 ### 3. Overall Genre Dominance
 
-This bar chart clearly illustrates the total global sales performance of different video game genres.
-It highlights the consistent dominance of **Action** and **Sports** genres, which significantly lead the market in total global sales, guiding potential development or marketing focus. Sales figures are clearly displayed on each bar for quick comparison.
+This bar chart illustrates the total global sales performance of different video game genres.
+What stands out here is how dominant the Action and Sports genres are. They clearly lead the market in total global sales, which really helps us decide where to focus our development or marketing efforts. Plus, you can easily see the exact sales numbers right on each bar for quick comparisons.
 
+### 4. Major Publishers: Games Released vs. Sales
 
+This bubble chart visualizes the relationship between the total **number of games released** by major publishers (indicated by bubble color) and their total **global sales** (indicated by bubble size).
+It compares publishers who might release many games with those who generate high sales with a potentially smaller portfolio, revealing different business models. Axis labels for "Number of Games Released" and "Total Global Sales" are provided for clarity.
+
+### 5. Top Game in Each Genre
+
+This interactive bar chart allows users to select a genre from a dropdown filter and see its best-selling game globally.
+It provides insight into the top performers within specific niches, useful for understanding genre-specific top sellers and their exact sales figures.
 
 
 ## Tools Used
