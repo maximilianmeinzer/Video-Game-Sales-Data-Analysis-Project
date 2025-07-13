@@ -20,6 +20,8 @@ The project covers essential data exploration and data cleaning techniques.
 
 * [Visualization in Tableau](#Key-Visualizations-in-Tableau)
 
+* [Key Insights & Conclusions](#Key-Insights-and-Conclusions)
+
 ## Goal of the Project:
 To extract meaningful insights and identify key trends from historical video game sales
 
@@ -49,7 +51,7 @@ When working with a dataset, the data in it can be very messy due to missing val
 
 ### 1. Identifying Missing Values
 
-Missing values are one of the most common problems encountered in raw datasets. I inspected **DISTINCT** values in key columns like *Year* and *Publisher*, to reveal if missing values exist. Instead of **NULLs** the missing values were saved as **N/A** Strings. The next query counted the exact number of missing entries across all relevant columns, where we found out that there were **271** missing entries in the *Year* column and **58** in the *Publisher* column. We achieved this by using the `SUM` aggregate function with a `CASE` Statement, which identified records that were **NULL** or contained the **'N/A'**. This led to the decision to exclude these incomplete entries from the analysis for data integrity.
+Missing values are one of the most common problems encountered in raw datasets. I inspected `DISTINCT` values in key columns like *Year* and *Publisher*, to reveal if missing values exist. Instead of **NULLs** the missing values were saved as **N/A** Strings. The next query counted the exact number of missing entries across all relevant columns, where we found out that there were **271** missing entries in the *Year* column and **58** in the *Publisher* column. We achieved this by using the `SUM` aggregate function with a `CASE` Statement, which identified records that were **NULL** or contained the **'N/A'**. This led to the decision to exclude these incomplete entries from the analysis for data integrity.
 
 ### 2. Identifying Inconsistent and Unclear Naming Schemes
 
@@ -165,6 +167,7 @@ It compares publishers who might release many games with those who generate high
 This interactive bar chart allows users to select a genre from a dropdown filter and see its best-selling game globally.
 It provides insight into the top performers within specific niches, useful for understanding genre-specific top sellers and their exact sales figures.
 
+## Key Insights & Conclusions
 
 ## Tools Used
 
