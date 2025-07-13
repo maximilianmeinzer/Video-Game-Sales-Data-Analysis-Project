@@ -20,7 +20,7 @@ The project covers essential data exploration and data cleaning techniques.
 
 * [Visualization in Tableau](#Key-Visualizations-in-Tableau)
 
-* [Key Insights & Conclusions](#Key-Insights-and-Conclusions)
+* [Key Insights & Conclusions](#Key-Insights-&-Conclusions)
 
 ## Goal of the Project:
 To extract meaningful insights and identify key trends from historical video game sales
