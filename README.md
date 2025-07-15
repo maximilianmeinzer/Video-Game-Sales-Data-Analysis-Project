@@ -175,5 +175,5 @@ Our deep dive into video game sales shows a fascinating story: Action and Sports
 
 ## Contact Information
 
-*LinkedIn: [@maximilianmeinzer](https://www.linkedin.com/in/maximilianmeinzer/)  
-*Email: maxmeinzer@gmx.de
+* LinkedIn: [@maximilianmeinzer](https://www.linkedin.com/in/maximilianmeinzer/)  
+* Email: maxmeinzer@gmx.de
