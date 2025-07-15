@@ -1,4 +1,4 @@
-# Video Game Analysis Project by Maximilian Meinzer
+# Video Game Sales Data Analysis Project by Maximilian Meinzer
 
 ## Introduction
 
