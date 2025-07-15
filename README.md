@@ -1,4 +1,4 @@
-# Video Game Analysis Project
+# Video Game Analysis Project by Maximilian Meinzer
 
 ## Introduction
 
@@ -21,6 +21,8 @@ The project covers essential data exploration and data cleaning techniques.
 * [Visualization in Tableau](#Key-Visualizations-in-Tableau)
 
 * [Key Insights & Conclusions](#Key-Insights-&-Conclusions)
+
+* [Contact Information](#Contact-Information)
 
 ## Goal of the Project:
 To extract meaningful insights and identify key trends from historical video game sales
@@ -169,8 +171,9 @@ It provides insight into the top performers within specific niches, useful for u
 
 ## Key Insights & Conclusions
 
-## Tools Used
+Our deep dive into video game sales shows a fascinating story: Action and Sports games have consistently ruled the market. We saw game releases boom, hitting a big peak around 2008-2009, after which the industry shifted, perhaps due to the rise of mobile gaming and bigger, slower AAA titles with longer production cycles. Interestingly, publishers have taken different paths to success: some focus on quantity by putting out more games, while others prioritize quality over volume, aiming for higher sales with fewer releases. Overall, it's a dynamic market with clear leaders and evolving trends.
 
-Database: SQL Server
-IDE: SQL Server Management Studio
-Visualization: Tableau, Excel
+## Contact Information
+
+*LinkedIn: [@maximilianmeinzer](https://www.linkedin.com/in/maximilianmeinzer/)
+*Email: maxmeinzer@gmx.de
